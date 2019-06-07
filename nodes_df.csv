@@ -1,0 +1,9 @@
+"","id","type","cluster","spaces","line","lastTargetForLevel","shape","height","margin","fontcolor","fixedsize","label","control","value","cost","definition","join","style","type1","intervention","base","slots","combination","residual","reversed","certainty","flipped","memory","indegree","outdegree","oldlabel"
+"1",1,NA,"",0,1,0,"rectangle","0","0.15","gray40","false","Families spend more
+time together  ",NA,NA,NA,NA,NA,NA,"intensity",NA,NA,10,"softadd",0,FALSE,1,FALSE,FALSE,1,0,"Families spend more
+time together  "
+"2",2,NA,"",1,2,1,"rectangle","0","0.15","gray40","false","Fathers interacting
+more with their
+children  ",NA,NA,NA,NA,NA,NA,"intensity",NA,NA,10,"softadd",0,FALSE,1,FALSE,FALSE,0,1,"Fathers interacting
+more with their
+children  "

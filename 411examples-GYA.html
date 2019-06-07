@@ -1,0 +1,238 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title>411examples-GYA</title><link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; word-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 40px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:first-child { margin-top: -20px; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; }
+button, input, select, textarea { color: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 2; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px !important; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  html.blink-to-pdf { font-size: 13px; }
+  .typora-export #write { padding-left: 32px; padding-right: 32px; padding-bottom: 0px; break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  @page { margin: 20mm 0px; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.md-inline-math .MathJax_SVG .noError { display: none !important; }
+.html-for-mac .inline-math-svg .MathJax_SVG { vertical-align: 0.2px; }
+.md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: hidden; display: block !important; }
+.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
+.MathJax_SVG .MJX-monospace { font-family: var(--monospace); }
+.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
+.MathJax_SVG * { transition: none; }
+.MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="mermaid"] svg, [lang="flow"] svg { max-width: 100%; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+
+
+:root { --side-bar-bg-color: #fafafa; --control-text-color: #777; }
+html { font-size: 16px; }
+body { font-family: "Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; color: rgb(51, 51, 51); line-height: 1.6; }
+#write { max-width: 860px; margin: 0px auto; padding: 30px 30px 100px; }
+#write > ul:first-child, #write > ol:first-child { margin-top: 30px; }
+a { color: rgb(65, 131, 196); }
+h1, h2, h3, h4, h5, h6 { position: relative; margin-top: 1rem; margin-bottom: 1rem; font-weight: bold; line-height: 1.4; cursor: text; }
+h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor { text-decoration: none; }
+h1 tt, h1 code { font-size: inherit; }
+h2 tt, h2 code { font-size: inherit; }
+h3 tt, h3 code { font-size: inherit; }
+h4 tt, h4 code { font-size: inherit; }
+h5 tt, h5 code { font-size: inherit; }
+h6 tt, h6 code { font-size: inherit; }
+h1 { padding-bottom: 0.3em; font-size: 2.25em; line-height: 1.2; border-bottom: 1px solid rgb(238, 238, 238); }
+h2 { padding-bottom: 0.3em; font-size: 1.75em; line-height: 1.225; border-bottom: 1px solid rgb(238, 238, 238); }
+h3 { font-size: 1.5em; line-height: 1.43; }
+h4 { font-size: 1.25em; }
+h5 { font-size: 1em; }
+h6 { font-size: 1em; color: rgb(119, 119, 119); }
+p, blockquote, ul, ol, dl, table { margin: 0.8em 0px; }
+li > ol, li > ul { margin: 0px; }
+hr { height: 2px; padding: 0px; margin: 16px 0px; background-color: rgb(231, 231, 231); border: 0px none; overflow: hidden; box-sizing: content-box; }
+li p.first { display: inline-block; }
+ul, ol { padding-left: 30px; }
+ul:first-child, ol:first-child { margin-top: 0px; }
+ul:last-child, ol:last-child { margin-bottom: 0px; }
+blockquote { border-left: 4px solid rgb(223, 226, 229); padding: 0px 15px; color: rgb(119, 119, 119); }
+blockquote blockquote { padding-right: 0px; }
+table { padding: 0px; word-break: initial; }
+table tr { border-top: 1px solid rgb(223, 226, 229); margin: 0px; padding: 0px; }
+table tr:nth-child(2n), thead { background-color: rgb(248, 248, 248); }
+table tr th { font-weight: bold; border-width: 1px 1px 0px; border-top-style: solid; border-right-style: solid; border-left-style: solid; border-top-color: rgb(223, 226, 229); border-right-color: rgb(223, 226, 229); border-left-color: rgb(223, 226, 229); border-image: initial; border-bottom-style: initial; border-bottom-color: initial; text-align: left; margin: 0px; padding: 6px 13px; }
+table tr td { border: 1px solid rgb(223, 226, 229); text-align: left; margin: 0px; padding: 6px 13px; }
+table tr th:first-child, table tr td:first-child { margin-top: 0px; }
+table tr th:last-child, table tr td:last-child { margin-bottom: 0px; }
+.CodeMirror-lines { padding-left: 4px; }
+.code-tooltip { box-shadow: rgba(0, 28, 36, 0.3) 0px 1px 1px 0px; border-top: 1px solid rgb(238, 242, 242); }
+.md-fences, code, tt { border: 1px solid rgb(231, 234, 237); background-color: rgb(248, 248, 248); border-radius: 3px; padding: 2px 4px 0px; font-size: 0.9em; }
+code { background-color: rgb(243, 244, 244); padding: 0px 2px; }
+.md-fences { margin-bottom: 15px; margin-top: 15px; padding-top: 8px; padding-bottom: 6px; }
+.md-task-list-item > input { margin-left: -1.3em; }
+@media print {
+  html { font-size: 13px; }
+  table, pre { break-inside: avoid; }
+  pre { word-wrap: break-word; }
+}
+.md-fences { background-color: rgb(248, 248, 248); }
+#write pre.md-meta-block { padding: 1rem; font-size: 85%; line-height: 1.45; background-color: rgb(247, 247, 247); border: 0px; border-radius: 3px; color: rgb(119, 119, 119); margin-top: 0px !important; }
+.mathjax-block > .code-tooltip { bottom: 0.375rem; }
+.md-mathjax-midline { background: rgb(250, 250, 250); }
+#write > h3.md-focus::before { left: -1.5625rem; top: 0.375rem; }
+#write > h4.md-focus::before { left: -1.5625rem; top: 0.285714rem; }
+#write > h5.md-focus::before { left: -1.5625rem; top: 0.285714rem; }
+#write > h6.md-focus::before { left: -1.5625rem; top: 0.285714rem; }
+.md-image > .md-meta { border-radius: 3px; padding: 2px 0px 0px 4px; font-size: 0.9em; color: inherit; }
+.md-tag { color: rgb(167, 167, 167); opacity: 1; }
+.md-toc { margin-top: 20px; padding-bottom: 20px; }
+.sidebar-tabs { border-bottom: none; }
+#typora-quick-open { border: 1px solid rgb(221, 221, 221); background-color: rgb(248, 248, 248); }
+#typora-quick-open-item { background-color: rgb(250, 250, 250); border-color: rgb(254, 254, 254) rgb(229, 229, 229) rgb(229, 229, 229) rgb(238, 238, 238); border-style: solid; border-width: 1px; }
+.on-focus-mode blockquote { border-left-color: rgba(85, 85, 85, 0.12); }
+header, .context-menu, .megamenu-content, footer { font-family: "Segoe UI", Arial, sans-serif; }
+.file-node-content:hover .file-node-icon, .file-node-content:hover .file-node-open-state { visibility: visible; }
+.mac-seamless-mode #typora-sidebar { background-color: var(--side-bar-bg-color); }
+.md-lang { color: rgb(180, 101, 77); }
+.html-for-mac .context-menu { --item-hover-bg-color: #E6F0FE; }
+#md-notification .btn { border: 0px; }
+.dropdown-menu .divider { border-color: rgb(229, 229, 229); }
+
+
+
+
+
+ .typora-export li, .typora-export p, .typora-export,  .footnote-line {white-space: normal;} 
+</style>
+</head>
+<body class='typora-export os-windows' >
+<div  id='write'  class = 'is-node'><h1><a name='header-n1270' class='md-header-anchor '></a>Global Young Academy: Tracing the paths of GYA’s impact</h1><p>The <a href='https://globalyoungacademy.net/'>Global Young Academy</a> supports young scientists around the world to connect with other young scientists, develop their careers and work towards solving global problems with science. We asked over 100 people, who had been supported by GYA or were otherwise involved in the programme, to tell us stories about positive changes which had happened because of GYA activities.<sup class='md-footnote'><a href='#dfref-footnote-1' name='ref-footnote-1'>1</a></sup> We used an online survey.</p><p>&nbsp;</p><div style="background-color:coral;padding:30px;border-radius:3px;font-weight:bold">This research project was completed before work started on the Causal Map App, but using similar ideas. The causal map below was made by importing the old data into the new App.</div><p>We analysed the stories looking for examples of where people had said that <em><span class="MathJax_SVG" tabindex="-1" style="font-size: 100%; display: inline-block;"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.763ex" height="1.877ex" viewBox="0 -755.9 759 808.1" role="img" focusable="false" style="vertical-align: -0.121ex;"><defs><path stroke-width="0" id="E5-MJMATHI-42" d="M231 637Q204 637 199 638T194 649Q194 676 205 682Q206 683 335 683Q594 683 608 681Q671 671 713 636T756 544Q756 480 698 429T565 360L555 357Q619 348 660 311T702 219Q702 146 630 78T453 1Q446 0 242 0Q42 0 39 2Q35 5 35 10Q35 17 37 24Q42 43 47 45Q51 46 62 46H68Q95 46 128 49Q142 52 147 61Q150 65 219 339T288 628Q288 635 231 637ZM649 544Q649 574 634 600T585 634Q578 636 493 637Q473 637 451 637T416 636H403Q388 635 384 626Q382 622 352 506Q352 503 351 500L320 374H401Q482 374 494 376Q554 386 601 434T649 544ZM595 229Q595 273 572 302T512 336Q506 337 429 337Q311 337 310 336Q310 334 293 263T258 122L240 52Q240 48 252 48T333 46Q422 46 429 47Q491 54 543 105T595 229Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)"><use xlink:href="#E5-MJMATHI-42" x="0" y="0"></use></g></svg></span><script type="math/tex">B</script> leads to <span class="MathJax_SVG" tabindex="-1" style="font-size: 100%; display: inline-block;"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.765ex" height="2.11ex" viewBox="0 -806.1 760 908.7" role="img" focusable="false" style="vertical-align: -0.238ex;"><defs><path stroke-width="0" id="E6-MJMATHI-43" d="M50 252Q50 367 117 473T286 641T490 704Q580 704 633 653Q642 643 648 636T656 626L657 623Q660 623 684 649Q691 655 699 663T715 679T725 690L740 705H746Q760 705 760 698Q760 694 728 561Q692 422 692 421Q690 416 687 415T669 413H653Q647 419 647 422Q647 423 648 429T650 449T651 481Q651 552 619 605T510 659Q484 659 454 652T382 628T299 572T226 479Q194 422 175 346T156 222Q156 108 232 58Q280 24 350 24Q441 24 512 92T606 240Q610 253 612 255T628 257Q648 257 648 248Q648 243 647 239Q618 132 523 55T319 -22Q206 -22 128 53T50 252Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)"><use xlink:href="#E6-MJMATHI-43" x="0" y="0"></use></g></svg></span><script type="math/tex">C</script></em> - for example, where someone said “I loved the regional meetings because they helped me widen my professional network”. Then all the <em><span class="MathJax_SVG" tabindex="-1" style="font-size: 100%; display: inline-block;"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.763ex" height="1.877ex" viewBox="0 -755.9 759 808.1" role="img" focusable="false" style="vertical-align: -0.121ex;"><defs><path stroke-width="0" id="E5-MJMATHI-42" d="M231 637Q204 637 199 638T194 649Q194 676 205 682Q206 683 335 683Q594 683 608 681Q671 671 713 636T756 544Q756 480 698 429T565 360L555 357Q619 348 660 311T702 219Q702 146 630 78T453 1Q446 0 242 0Q42 0 39 2Q35 5 35 10Q35 17 37 24Q42 43 47 45Q51 46 62 46H68Q95 46 128 49Q142 52 147 61Q150 65 219 339T288 628Q288 635 231 637ZM649 544Q649 574 634 600T585 634Q578 636 493 637Q473 637 451 637T416 636H403Q388 635 384 626Q382 622 352 506Q352 503 351 500L320 374H401Q482 374 494 376Q554 386 601 434T649 544ZM595 229Q595 273 572 302T512 336Q506 337 429 337Q311 337 310 336Q310 334 293 263T258 122L240 52Q240 48 252 48T333 46Q422 46 429 47Q491 54 543 105T595 229Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)"><use xlink:href="#E5-MJMATHI-42" x="0" y="0"></use></g></svg></span><script type="math/tex">B</script></em>s (like, <em>Global and regional interaction</em>) and all the <span class="MathJax_SVG" tabindex="-1" style="font-size: 100%; display: inline-block;"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.765ex" height="2.11ex" viewBox="0 -806.1 760 908.7" role="img" focusable="false" style="vertical-align: -0.238ex;"><defs><path stroke-width="0" id="E6-MJMATHI-43" d="M50 252Q50 367 117 473T286 641T490 704Q580 704 633 653Q642 643 648 636T656 626L657 623Q660 623 684 649Q691 655 699 663T715 679T725 690L740 705H746Q760 705 760 698Q760 694 728 561Q692 422 692 421Q690 416 687 415T669 413H653Q647 419 647 422Q647 423 648 429T650 449T651 481Q651 552 619 605T510 659Q484 659 454 652T382 628T299 572T226 479Q194 422 175 346T156 222Q156 108 232 58Q280 24 350 24Q441 24 512 92T606 240Q610 253 612 255T628 257Q648 257 648 248Q648 243 647 239Q618 132 523 55T319 -22Q206 -22 128 53T50 252Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)"><use xlink:href="#E6-MJMATHI-43" x="0" y="0"></use></g></svg></span><script type="math/tex">C</script>s (like <em>networks, friendships, support</em>) were grouped into themes,  which are the boxes in the diagram below: a Theory of Change for GYA. All the individual stories linking <span class="MathJax_SVG" tabindex="-1" style="font-size: 100%; display: inline-block;"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.763ex" height="1.877ex" viewBox="0 -755.9 759 808.1" role="img" focusable="false" style="vertical-align: -0.121ex;"><defs><path stroke-width="0" id="E5-MJMATHI-42" d="M231 637Q204 637 199 638T194 649Q194 676 205 682Q206 683 335 683Q594 683 608 681Q671 671 713 636T756 544Q756 480 698 429T565 360L555 357Q619 348 660 311T702 219Q702 146 630 78T453 1Q446 0 242 0Q42 0 39 2Q35 5 35 10Q35 17 37 24Q42 43 47 45Q51 46 62 46H68Q95 46 128 49Q142 52 147 61Q150 65 219 339T288 628Q288 635 231 637ZM649 544Q649 574 634 600T585 634Q578 636 493 637Q473 637 451 637T416 636H403Q388 635 384 626Q382 622 352 506Q352 503 351 500L320 374H401Q482 374 494 376Q554 386 601 434T649 544ZM595 229Q595 273 572 302T512 336Q506 337 429 337Q311 337 310 336Q310 334 293 263T258 122L240 52Q240 48 252 48T333 46Q422 46 429 47Q491 54 543 105T595 229Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)"><use xlink:href="#E5-MJMATHI-42" x="0" y="0"></use></g></svg></span><script type="math/tex">B</script>s and <span class="MathJax_SVG" tabindex="-1" style="font-size: 100%; display: inline-block;"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.765ex" height="2.11ex" viewBox="0 -806.1 760 908.7" role="img" focusable="false" style="vertical-align: -0.238ex;"><defs><path stroke-width="0" id="E6-MJMATHI-43" d="M50 252Q50 367 117 473T286 641T490 704Q580 704 633 653Q642 643 648 636T656 626L657 623Q660 623 684 649Q691 655 699 663T715 679T725 690L740 705H746Q760 705 760 698Q760 694 728 561Q692 422 692 421Q690 416 687 415T669 413H653Q647 419 647 422Q647 423 648 429T650 449T651 481Q651 552 619 605T510 659Q484 659 454 652T382 628T299 572T226 479Q194 422 175 346T156 222Q156 108 232 58Q280 24 350 24Q441 24 512 92T606 240Q610 253 612 255T628 257Q648 257 648 248Q648 243 647 239Q618 132 523 55T319 -22Q206 -22 128 53T50 252Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)"><use xlink:href="#E6-MJMATHI-43" x="0" y="0"></use></g></svg></span><script type="math/tex">C</script>s are synthesised into one story using a pre-defined set of analysis steps. </p><p><img src='assets/1559329785486.png' alt='1559329785486' referrerPolicy='no-referrer' /></p><blockquote><p>Figure 1: causal map for the Global Young Academy. The numbers in the boxes (and the size of the boxes) reflect the number of people who mentioned a specific factor, and the width of the arrows reflects the number of people who mentioned that specific link. Arrows and boxes which were mentioned only by <strong><em>women</em></strong> are coloured <strong><em>red</em></strong>; those mentioned only by <strong><em>men</em></strong> are coloured <strong><em>blue</em></strong> (and shades in between red and blue were mentioned by both). Boxes with <strong><em>white</em></strong> borders were mentioned only by <strong><em>younger</em></strong> people; boxes with black borders were mentioned only by <strong><em>older</em></strong> people (aged over 40, including alumni, professors etc.). Grey shades in between were mentioned by both. In the online version of the diagram, if the user hovers over boxes and arrows they are given more information including individual quotes.</p></blockquote><p>The factors which people mentioned sort themselves into three layers, reading from left-to-right: GYA inputs, individual impacts and broader impacts. So taken together, people told us about a range of GYA inputs which led mainly to a range of impacts on individuals. These impacts on individuals also led to some broader impacts like “improved learning &amp; teaching” on the right-hand-side. People also quite frequently mentioned direct links from GYA inputs to these broader impacts. The diagram reveals a lot of insights, like these:</p><ul><li>People, especially women, reported that GYA activities, especially global and regional interaction like attending conferences, had many positive personal influences like establishing support networks with other young scientists.</li><li>At the heart of the theory of change is that young scientists themselves adopt GYA’s values and vision, which enables them to go on to have broader impacts like improving teaching.</li><li>Women, especially younger women, most often mentioned “solving world problems” as a broader impact, while men often mentioned interdisciplinary interaction leading to international projects and publications.</li><li>Older people mentioned GYA membership and office-holding as important inputs, and most frequently mentioned how they had learned soft skills and in particular management skills through GYA participation, whereas younger people, especially women, mentioned training inputs and how they led to career opportunities. </li></ul><p>&nbsp;</p><div style="background-color:coral;padding:30px;border-radius:3px;font-weight:normal">The research report was very well-received, and the causal map was seen as central - even though we had not originally planned to analyse the stories in this way. It produced more discussion than the whole of the rest of the survey report which included dozens of conventional closed and open questions analysed with bar-charts etc. It provides not only an overall causal story but also number-based comparisons, e.g. between women and men; and the numbers are based on themes which emerged from the participants' own stories rather than being guessed-at in advance.</div><p>&nbsp;</p><h2><a name='header-n1293' class='md-header-anchor '></a>More details</h2><p>Here are a few more details about this research project and the findings.</p><p>GYA’s 10-year anniversary in 2018 was an opportunity to reflect on what has been accomplished so far and to inform the next 2020-2025 strategic plan to increase impact for the next 10 years. An impact evaluation was commissioned by the GYA to explore this impact further. The overall goal of this impact assessment was to understand personal narratives of impact and to generate data to inform development of the next 5-year strategic plan.</p><h3><a name='header-n1296' class='md-header-anchor '></a>Aims</h3><p>The aims of the impact assessment were to better understand:</p><ul><li>how members, alumni, and other young scientists experience GYA activities</li><li>the impact of GYA activities on them (on the individual, their institutions and countries, and globally)</li><li>to explore the contribution of the GYA to this impact</li></ul><h3><a name='header-n1305' class='md-header-anchor '></a>Methods</h3><p>To collect these data, we sent a web survey to all GYA members, alumni, members of National Young Academies, and other young scientists (who may have had contact with GYA) inviting them to share their stories of the GYA. The survey was open from 22 Oct – 13 Nov 2018. Of the 683 people reached, 103 completed the survey.</p><p>A full report giving details of methodology and the complete analysis are available separately. </p><p>In the main part of the survey, respondents were asked for personal stories about <em>“how the GYA has influenced our members, other scientist/researchers, their institutions, countries, science and the world.  These may include (but are not limited to) skills-building, personal development, friends, networks and connections, mentorship, primary research collaboration, publications, qualifications, policy papers published, policies enacted or influenced etc.”</em> Respondents could enter up to three stories as well as answering some closed questions like gender, age etc. Alongside some quantitative analysis of the responses, in the main part of the study the stories were qualitatively analysed. </p><h3><a name='header-n1309' class='md-header-anchor '></a>Findings</h3><p>The answers to the web survey were coded as described above. Initially we identified a larger group of different themes. We combined them step by step into a smaller set of over-arching themes. </p><p><img src='assets/1559329387947.png' alt='1559329387947' referrerPolicy='no-referrer' /> </p><blockquote><p>Figure 2. The original causal map produced for the research report. There is no coding according to gender or age.</p></blockquote><p><img src='assets/1559226447376.png' alt='1559226447376' referrerPolicy='no-referrer' /></p><blockquote><p>Figure 3: An intermediate version of the causal map, reanalysing the same data subsequent to the release of the report, produced with the new Causal Map App.</p></blockquote><h4><a name='header-n1317' class='md-header-anchor '></a>GYA INPUTS</h4><p>By far the most common theme in this group was <strong>global and regional interaction,</strong> in particular, meetings. </p><blockquote><p>I meet colleagues from others countries so I learned how they are organized in their National Young Academy (NYA). When I went back I decided to create a NYA [National Young Academy]. </p></blockquote><p><em>Note, paragraphs formatted like the one above are quotes from actual respondent stories.</em></p><p>Also, respondents often mentioned membership of GYA as relevant to their stories:</p><blockquote><p>When I talk about my own Young Academy, which I often do, I always talk about how our Young Academy is also part of GYA and that gives our Young Academy more credibility and clout. </p></blockquote><blockquote><p>Being accepted as a member of the GYA gave me immense confidence boost… </p></blockquote><p>Many respondents highlighted <em>GYA’s inclusive, supportive, interdisciplinary values</em> as an important input in its own right.</p><blockquote><p>I always felt like a bit of an oddball scientist because I do not conform to the “traditional” scientist model… </p></blockquote><h4><a name='header-n1330' class='md-header-anchor '></a>INDIVIDUAL IMPACT</h4><p>There was a wide variety of themes concerning impact on individuals. The most common was <strong>Building networks &amp; friendships, including mutual support</strong>. </p><blockquote><p>If I think about the greatest lasting effect of the GYA on me as a person, excluding benefits only to my career, the most significant impact the GYA has had on me is the network of friends I have built who are passionate about improving society through the work they do and the activities they volunteer on and they way they have changed my thinking.</p></blockquote><p>We have described the second most common theme as <em>Adopting GYA’s values and vision</em>. Here, a key personal impact is described as understanding and taking on board a specific GYA way of thinking which involves diversity, cross-disciplinary work, and taking new perspectives on familiar issues. </p><blockquote><p>Realising that science truly is global, and excellent science comes from every country on earth </p></blockquote><p>Some respondents describe it as quite a profound change in their understanding of and approach to science and even issues beyond science. </p><blockquote><p>To give one specific story, will be the ECs response to the request from our funders to have a GYA initiative in response to the EU immigrations ‘crisis’. In 2016 there was so much media attention on immigration of refugees of war into Europe, and how Europe was going to deal with this ‘crisis’. Whilst the fleeing of thousands of innocent people from war was truly a humanitarian crisis, the perspective in the media came more from this being a social ‘crisis’ for the countries to which the immigrant were feeling, that they now had to ‘deal with’. Thus, when the GYA held a meeting regarding Europe’s response to this immigrate crisis, EC members from Africa countries brought to the table their objection to just an initiative, given the millions of refugees of war that Africa countries have been supporting for years, with no media attention. Their perspective was that in their countries, refugees were brought in and supported as brothers and sisters in need, not as invaders. This discussion will remain with me forever and continues to highlight the advantage to understanding a different perspective to global issues. but more importantly, the need to ensure that Europe and America do not dominate the conversation and perspective. That we continue to draw on the perspectives from a diverse experience. </p></blockquote><p>A related theme was general <em>awareness of diversity</em>.</p><blockquote><p>The GYA has profoundly affected how I think about cultural diversity. </p></blockquote><p>This theme was later combined with another common theme: <em>new opportunities and career development</em>.</p><blockquote><p>These opportunities brought me to many places, and allowed me to experience diverse cultures and connect with varied individuals, but more importantly, gave me an opportunity to learn new things, enrich my skills, discover more of my talents, and think beyond my own research field. </p></blockquote><p>Another important strand, mentioned by women and men, young and old, was <em>confidence</em>. Some people said that holding GYA office helped to improve their confidence, and some mentioned that improved confidence was a factor in helping to empower excluded scientists.</p><blockquote><p>The GYA has helped me to connect to a deep commitment I have to engage, to serve and to help build a better world. </p></blockquote><p><em>Management, leadership, teamwork skills and soft skills</em> were frequently mentioned, for example learning about participatory methodologies. </p><blockquote><p>I started thinking about nurturing leadership in a strategical way and [thanks] to GYA for this piece of inspiration. </p></blockquote><h4><a name='header-n1352' class='md-header-anchor '></a>BROADER IMPACT</h4><p>Many stories mentioned broader impacts beyond those on individuals. The most frequently mentioned was <em>improved learning and teaching / support to the scholarly environment</em>.</p><blockquote><p>After some planning and with the strong support of GYA members in the ASEAN region, ASEAN has established the ASEAN Young Scientists Network and the Responsible Conduct of Research Programme will be one of the key programmes of this ASEAN network.  </p></blockquote><blockquote><p>GYA motivated me to set up the Benin Young Academy of Science, with their advices. </p></blockquote><blockquote><p>I feel that the existence of GYA is very important because it acts as a cohesive network for all other Young Academies</p></blockquote><p>There was also frequent mention of concrete impacts such as <em>Doing collaborative projects internationally, publications and science addressed to global problems</em>.</p><blockquote><p>Another GYA member and I have a joint research grant together … In addition, we also had a joint research publication in a very high impact journal</p></blockquote><h4><a name='header-n1363' class='md-header-anchor '></a>LINKS BETWEEN THEMES</h4><p>The story fragments quoted above were given as examples of particular themes, but all the sentences in the stories which we categorised in fact contain a link from one theme to another. </p><p>The most frequently mentioned link was <em>Global and regional interaction → Building networks …</em>:</p><blockquote><p>I met incredibly inspiring colleagues from around the world that think like me, making me feel like I’m not alone which is often difficult when you are one of the few STEM PhDs in a tiny Caribbean island. </p></blockquote><p>Another common link was <em>GYA (non-specific) … membership</em> → <em>Overcoming discrimination … Confidence</em></p><blockquote><p>Winning the membership itself has given me a strong motivation and confidence to speak up my thoughts and vision regarding young scientist’s role in advancing science, health, and research in all regions of the world.</p></blockquote><p>As well as people telling us about links from GYA inputs to personal factors and then on to impacts, sometimes they told us about links directly from GYA inputs (on the left of the diagram) to broader impacts (on the right of the diagram), such as the link <em>GYA (non-specific)</em> → <em>Scholarly Environment</em>…:</p><blockquote><p>I feel that the existence of GYA is very important because it acts as a cohesive network for all other Young Academies</p></blockquote><p>One particularly interesting set of links was from the theme “<em>Adopting GYA Theory of Change”</em> <em>.</em> This was often mentioned as a driver of broader impact. </p><blockquote><p>GYA gatherings were always opportunities to strengthen my ideas and have insights into new ideas which were always brought back home to drive one initiative or the other in my national young academy. </p></blockquote><blockquote><p>This helps create a network and foundation for later long-distance work, but, moreover, helps to find common values and to identify shared ideas that can guide member activities throughout the year. Attendees think and talk about familiar and new ideas, about how to apply familiar ideas to new areas, and explore the scope for new cooperation across disciplines, countries and cultures.</p></blockquote><p>&nbsp;</p><ul><li>test2<sup class='md-footnote'><a href='#dfref-footnote-2' name='ref-footnote-2'>2</a></sup></li><li>test3<sup class='md-footnote'><a href='#dfref-footnote-3' name='ref-footnote-3'>3</a></sup></li></ul><p>test4<sup class='md-footnote'><a href='#dfref-footnote-4' name='ref-footnote-4'>4</a></sup></p><p>test5<sup class='md-footnote'><a href='#dfref-footnote-5' name='ref-footnote-5'>5</a></sup></p><p>test6<sup class='md-footnote'><a href='#dfref-footnote-6' name='ref-footnote-6'>6</a></sup></p><p>footnotes</p><div class='footnotes-area'  ><hr/>
+<div class='footnote-line'><span class='md-fn-count'>1</span> here is my fotnot<a name='dfref-footnote-1' href='#ref-footnote-1' title='back to document' class='reversefootnote' >↩</a></div>
+<div class='footnote-line'><span class='md-fn-count'>2</span> Test2<a name='dfref-footnote-2' href='#ref-footnote-2' title='back to document' class='reversefootnote' >↩</a></div>
+<div class='footnote-line'><span class='md-fn-count'>3</span> Test3<a name='dfref-footnote-3' href='#ref-footnote-3' title='back to document' class='reversefootnote' >↩</a></div>
+<div class='footnote-line'><span class='md-fn-count'>4</span> Test4<a name='dfref-footnote-4' href='#ref-footnote-4' title='back to document' class='reversefootnote' >↩</a></div>
+<div class='footnote-line'><span class='md-fn-count'>5</span> Test5<a name='dfref-footnote-5' href='#ref-footnote-5' title='back to document' class='reversefootnote' >↩</a></div>
+<div class='footnote-line'><span class='md-fn-count'>6</span> Test6<a name='dfref-footnote-6' href='#ref-footnote-6' title='back to document' class='reversefootnote' >↩</a></div></div></div>
+</body>
+</html>

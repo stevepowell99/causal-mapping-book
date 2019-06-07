@@ -1,0 +1,33 @@
+digraph {
+
+graph [layout = 'dot',
+       outputorder = 'edgesfirst',
+       bgcolor = 'white',
+       rankdir = 'LR',
+       labelloc = 'b',
+       color = 'gray',
+       label = '']
+
+node [fontname = 'Helvetica',
+      fontsize = '10',
+      shape = 'circle',
+      fixedsize = 'false',
+      width = '0.5',
+      style = 'filled',
+      fillcolor = 'aliceblue',
+      color = 'gray70',
+      fontcolor = 'gray50']
+
+edge [fontname = 'Helvetica',
+     fontsize = '8',
+     len = '1.5',
+     color = 'gray80',
+     arrowsize = '0.5']
+
+  '1' [shape = 'rectangle', height = '0', margin = '0.15', fontcolor = 'gray40', fixedsize = 'false', label = 'Families spend more
+time together  ', style = 'filled'] 
+  '2' [shape = 'rectangle', height = '0', margin = '0.15', fontcolor = 'gray40', fixedsize = 'false', label = 'Fathers interacting
+more with their
+children  ', style = 'filled'] 
+'2'->'1' [color = 'gray', fontcolor = 'gray40', style = 'dashed', dir = 'none', label = ' ', arrowhead = 'normal', penwidth = '1'] 
+}

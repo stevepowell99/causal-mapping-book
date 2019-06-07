@@ -1,0 +1,23 @@
+### The basic rule
+
+```{r,echo=F}
+DiagrammeR::mermaid('
+graph LR
+B(Influence variable B)-->E(Consequence variable E)
+C(Influence variable C)-->E(Consequence variable E)
+D(Influence variable D)-->E(Consequence variable E)
+
+',height=200)
+```
+
+This is a "mini-map": one or more variables are shown with arrows leading to another. 
+
+
+```{r,echo=F}
+DiagrammeR::mermaid('
+graph LR
+x
+
+',height=200)
+```
+> A mini-map in which one or more variables (the "influence variables") are shown with arrows leading to another ("the consequence variable") says, for example: "the influence variables B, C and D all have some kind of causal influence on the consequence variable E".  That sentence is equivalent to the map above.
